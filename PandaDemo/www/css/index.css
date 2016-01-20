@@ -37,49 +37,49 @@ h3 {
     }
 
 #lapAnimation {
-    width: 50%;
-    height: 50%;
+    width: 20%;
+    height: 20%;
 }
 
 #lap1 {
     position: relative;
-    top: 100px;
-    left: 200px;
+    top: 100%;
+    left: 100%;
     animation-name: lapAnimation1;
     animation-duration: 3s;
     animation-iteration-count: infinite;
 }
 
     #lap1 img {
-        width: 100px;
-        height: 100px;
+        width: 60%;
+        height: 60%;
     }
 
 #lap2 {
     position: relative;
-    top: 50px;
+    top: 50%;
     animation-name: lapAnimation2;
     animation-duration: 3s;
     animation-iteration-count: infinite;
 }
 
     #lap2 img {
-        width: 100px;
-        height: 100px;
+        width: 60%;
+        height: 60%;
     }
 
 #lap3 {
     position: relative;
     top: 0;
-    left: 200px;
+    left: 100%;
     animation-name: lapAnimation3;
     animation-duration: 3s;
     animation-iteration-count: infinite;
 }
 
     #lap3 img {
-        width: 100px;
-        height: 100px;
+        width: 60%;
+        height: 60%;
     }
 
 @keyframes lapAnimation1 {
