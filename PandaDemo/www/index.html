@@ -6,22 +6,19 @@
     <script src="scripts/platformOverrides.js"></script>
     <script src="scripts/index.js"></script>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.20/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.7/angular-resource.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.7/angular-route.min.js"></script>
+    <script src="scripts/angular-ui-router.min.js"></script>
     <script type="text/javascript" src="scripts/Controllers/loadPageConroller.js"></script>
+    <script type="text/javascript" src="scripts/app.js"></script>
     <script type="text/javascript" src="scripts/ng-cordova.min.js"></script>
 
-    <!--
-        Customize the content security policy in the meta tag below as needed. Add 'unsafe-inline' to default-src to enable inline JavaScript.
-        For details, see http://go.microsoft.com/fwlink/?LinkID=617521
-    -->
-    <!--<meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">-->
     <title>PandaDemo</title>
 
-    <!-- PandaDemo references -->
     <link href="css/index.css" rel="stylesheet" />
+
 </head>
 <body ng-controller="loadPageController">
-    <!-- Cordova reference, this is added to your app when it's built. -->
-
     <div class="enter-page">
         <div class="logo">
             <img src="images/panda-logo.png" />
@@ -41,12 +38,11 @@
                 </div>
             </div>
         </div>
-        {{name}}
         <div class="author-title">
+            <a href="/menu">
             <h3 id="author-title">Studio 2016</h3>
+                </a>
         </div>
     </div>
-
-
 </body>
 </html>
