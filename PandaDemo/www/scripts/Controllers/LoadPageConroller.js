@@ -1,5 +1,5 @@
-﻿var myApp = angular.module('myApp', []);
+﻿var myApp = angular.module('myApp', ['ngCordova']);
 
-myApp.controller('loadPageController', ['$scope', function ($scope) {
-    
-}]);
+myApp.controller('loadPageController',  function ($scope, $cordovaDialogs) {
+
+});
