@@ -5,7 +5,12 @@
 (function () {
     "use strict";
 
-    document.addEventListener( 'deviceready', onDeviceReady.bind( this ), false );
+   // document.addEventListener('deviceready', onDeviceReady.bind(this), false);
+
+    document.addEventListener("deviceready", function() {
+        // retrieve the DOM element that had the ng-app attribute
+        angular.bootstrap(document, ['myApp']);
+    }, false);
 
     function onDeviceReady() {
         // Handle the Cordova pause and resume events
