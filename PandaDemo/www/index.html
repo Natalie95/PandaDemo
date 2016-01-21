@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html>
+<html ng-app="myApp">
 <head>
     <meta charset="utf-8" />
     <script src="cordova.js"></script>
@@ -20,21 +20,19 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.7/angular-resource.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.7/angular-route.min.js"></script>
     <script src="scripts/angular-ui-router.min.js"></script>
-    <script type="text/javascript" src="scripts/Controllers/loadPageConroller.js"></script>
+    <script type="text/javascript" src="scripts/Controllers/LoadPageConroller.js"></script>
     <script type="text/javascript" src="scripts/app.js"></script>
     <script type="text/javascript" src="scripts/ng-cordova.min.js"></script>
 
     <title>PandaDemo</title>
 
     <link href="css/index.css" rel="stylesheet" />
-
 </head>
-<body ng-controller="loadPageController">
+<body ng-controller="loadPageController" ng-init="loading()">
     <div class="enter-page">
         <div class="logo">
             <img src="images/panda-logo.png" />
         </div>
-
 
         <!--LOADER-->
         <div class="lap-container">
@@ -56,14 +54,12 @@
             </a>
         </div>
 
-
-
-        <div class="button-field">
+        <div class="button-field" id="loginButtons">
                 <div class="col-xs-6 col-sm-6 col-md-6">
-                    <button class="signin-button">Sign in</button>
+                    <button class="signin-button" ng-click="toMenu()">Sign in</button>
                 </div>
                 <div class="col-xs-6 col-sm-6 col-md-6">
-                    <button class="signup-button">Sign up</button>
+                    <button class="signup-button" ng-click="toMenu()">Sign up</button>
                 </div>
         </div>
     </div>

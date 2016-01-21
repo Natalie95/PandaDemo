@@ -9,7 +9,7 @@
 
     document.addEventListener("deviceready", function() {
         // retrieve the DOM element that had the ng-app attribute
-       // angular.bootstrap(document, 'myApp');
+        //angular.bootstrap(document, 'myApp');
     }, false);
 
     function onDeviceReady() {

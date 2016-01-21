@@ -1,9 +1,5 @@
 ﻿var myApp = angular.module('myApp', ['ngCordova', 'ngRoute'])
-.config(function ($compileProvider) {
-    $compileProvider.urlSanitizationWhitelist(/^\s*(https?|ftp|mailto|file|tel):/);
-})
     .config(function ($routeProvider) {
-
         $routeProvider
             .when("/", {
                 templateUrl: "/www/index.html",
@@ -12,22 +8,19 @@
             .when("/menu", {
                 templateUrl: "/www/menu.html"
             });
-
     });
-myApp.controller('loadPageController', function ($scope, $cordovaDialogs) {
 
-    var loadingIsReady = false;
-
+myApp.controller('loadPageController', function ($scope, $cordovaDialogs, $location) {
     $scope.loading = function () {
-
-        // loading actions
-
-        loadingIsReady = true;
+        document.getElementById("loginButtons").style.display = "none";
+        setTimeout(function () {
+            document.getElementById("lapAnimation").style.display = "none";
+            document.getElementById("loginButtons").style.display = "";
+        }, 5000);
     };
 
-    $scope.showLoginSigninButtons = function () {
-        return loadingIsReady;
+    $scope.toMenu = function () {
+        // $location.path("/menu");
+        location.href = "/menu.html";
     };
-
-
 });
