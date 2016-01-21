@@ -9,7 +9,7 @@
 
     document.addEventListener("deviceready", function() {
         // retrieve the DOM element that had the ng-app attribute
-        angular.bootstrap(document, 'myApp');
+       // angular.bootstrap(document, 'myApp');
     }, false);
 
     function onDeviceReady() {
@@ -27,4 +27,20 @@
     function onResume() {
         // TODO: This application has been reactivated. Restore application state here.
     };
+
+    var app = {
+        initialize: function () {
+            this.bindEvents();
+        },
+        bindEvents: function () {
+            document.addEventListener('deviceready', this.onDeviceReady, true);
+        },
+
+        onDeviceReady: function () {
+            angular.element(document).ready(function () {
+                angular.bootstrap(document);
+            });
+        },
+    };
+
 } )();

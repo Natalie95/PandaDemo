@@ -1,5 +1,33 @@
-﻿var myApp = angular.module('myApp', ['ngCordova', 'ngRoute', 'ngResource']);
+﻿var myApp = angular.module('myApp', ['ngCordova', 'ngRoute'])
+.config(function ($compileProvider) {
+    $compileProvider.urlSanitizationWhitelist(/^\s*(https?|ftp|mailto|file|tel):/);
+})
+    .config(function ($routeProvider) {
 
+        $routeProvider
+            .when("/", {
+                templateUrl: "/www/index.html",
+                controller: "loadPageController"
+            })
+            .when("/menu", {
+                templateUrl: "/www/menu.html"
+            });
+
+    });
 myApp.controller('loadPageController', function ($scope, $cordovaDialogs) {
-    $scope.ff = "ggg";
+
+    var loadingIsReady = false;
+
+    $scope.loading = function () {
+
+        // loading actions
+
+        loadingIsReady = true;
+    };
+
+    $scope.showLoginSigninButtons = function () {
+        return loadingIsReady;
+    };
+
+
 });
