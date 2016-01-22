@@ -12,7 +12,7 @@
 
 myApp.controller('loadPageController', function ($scope, $cordovaDialogs, $location) {
 
-    var timeout = 5000;
+    var timeout = 0000;
     var menuHref = "/menu.html";
 
     $scope.loading = function () {

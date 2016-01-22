@@ -182,3 +182,14 @@ h3 {
 /****END LOADER******/
 
 
+
+
+/*********MAIN PAGE************/
+.main {
+    width: 100%;
+    height: 100vh;
+}
+ #wardrope {
+    width:40% !important;
+    height:90%;
+}
