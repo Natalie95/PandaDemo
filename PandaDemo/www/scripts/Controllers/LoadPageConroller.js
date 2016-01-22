@@ -11,16 +11,13 @@
     });
 
 myApp.controller('loadPageController', function ($scope, $cordovaDialogs, $location) {
-    $scope.loading = function () {
-        document.getElementById("loginButtons").style.display = "none";
-        setTimeout(function () {
-            document.getElementById("lapAnimation").style.display = "none";
-            document.getElementById("loginButtons").style.display = "";
-        }, 5000);
-    };
 
-    $scope.toMenu = function () {
-        // $location.path("/menu");
-        location.href = "/menu.html";
+    var timeout = 5000;
+    var menuHref = "/menu.html";
+
+    $scope.loading = function () {
+        setTimeout(function () {
+            location.href = menuHref;
+        }, timeout);
     };
 });
