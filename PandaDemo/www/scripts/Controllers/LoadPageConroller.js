@@ -1,14 +1,15 @@
 ﻿var myApp = angular.module('myApp', ['ngCordova', 'ui.router'])
     .config(function ($stateProvider, $urlRouterProvider) {
-        $urlRouterProvider.otherwise('/index');
-        $stateProvider.state('index', {
-            url: '/index.html',
-            templateUrl: '/index.html',
+        $urlRouterProvider.otherwise('loading');
+        $stateProvider.state('loading', {
+            url: '/loading',
+            templateUrl: '/loading.html',
             controller: 'loadPageController'
         })
         .state('menu', {
             url: '/menu',
-            templateUrl: '/menu.html'
+            templateUrl: '/menu.html',
+            controller: 'menuController'
         })
     });
 
