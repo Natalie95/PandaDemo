@@ -10,29 +10,27 @@
     <link rel='stylesheet' href="bootstrap/css/bootstrap-theme.min.css" type='text/css' media='all'>
     <link rel='stylesheet' href="bootstrap/css/bootstrap.css" type='text/css' media='all'>
     <link rel='stylesheet' href="bootstrap/css/bootstrap.min.css" type='text/css' media='all'>
-
     <script type="text/javascript" src="bootstrap/js/bootstrap.js"></script>
     <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
-
     <script src="http://code.jquery.com/jquery-latest.js"></script>
 
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.20/angular.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.7/angular-resource.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.7/angular-route.min.js"></script>
     <script src="scripts/angular-ui-router.min.js"></script>
-    <script type="text/javascript" src="scripts/Controllers/LoadPageConroller.js"></script>
-    <script type="text/javascript" src="scripts/app.js"></script>
     <script type="text/javascript" src="scripts/ng-cordova.min.js"></script>
 
-    <title>PandaDemo</title>
+    <script type="text/javascript" src="scripts/Controllers/LoadPageConroller.js"></script>
+    <script type="text/javascript" src="scripts/Controllers/menuController.js"></script> 
 
     <link href="css/index.css" rel="stylesheet" />
+
+    <title>PandaDemo</title>
 </head>
 <body ng-controller="loadPageController" ng-init="loading()">
     <div class="enter-page">
         <div class="logo">
             <img src="images/panda-logo.png" />
         </div>
+        <div ui-view></div>
 
         <!--LOADER-->
         <div class="lap-container">
@@ -49,12 +47,10 @@
             </div>
         </div>
         <div class="author-title">
-            <a href="/menu">
-                <h3 id="author-title">Studio 2016</h3>
-            </a>
+            <h3 id="author-title">Studio 2016</h3>
         </div>
 
-        
+
     </div>
 </body>
 </html>

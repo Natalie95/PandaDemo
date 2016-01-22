@@ -1,23 +1,26 @@
-﻿var myApp = angular.module('myApp', ['ngCordova', 'ngRoute'])
-    .config(function ($routeProvider) {
-        $routeProvider
-            .when("/", {
-                templateUrl: "/www/index.html",
-                controller: "loadPageController"
-            })
-            .when("/menu", {
-                templateUrl: "/www/menu.html"
-            });
+﻿var myApp = angular.module('myApp', ['ngCordova', 'ui.router'])
+    .config(function ($stateProvider, $urlRouterProvider) {
+        $urlRouterProvider.otherwise('/index');
+        $stateProvider.state('index', {
+            url: '/index.html',
+            templateUrl: '/index.html',
+            controller: 'loadPageController'
+        })
+        .state('menu', {
+            url: '/menu',
+            templateUrl: '/menu.html'
+        })
     });
 
-myApp.controller('loadPageController', function ($scope, $cordovaDialogs, $location) {
+myApp.controller('loadPageController', function ($scope, $cordovaDialogs, $state) {
 
-    var timeout = 5000;
-    var menuHref = "/menu.html";
+    var timeout = 3000; 
+    var menuHref = 'menu';
 
     $scope.loading = function () {
         setTimeout(function () {
-            location.href = menuHref;
+            $state.go(menuHref);
         }, timeout);
     };
+
 });
