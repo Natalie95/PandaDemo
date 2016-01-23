@@ -16,8 +16,6 @@ h3 {
 }
 
 .logo img {
-    width: 50%;
-    height: 50%;
     vertical-align: middle;
     position: relative;
     top: 50%;
@@ -198,13 +196,23 @@ h3 {
 .main-wardrobe {
     display: inline-block;
 }
- #wardrope {
+
+
+ #wardrobe {
     position:absolute;
     right: 2%;
     bottom: 2%;
-    width:60%;
-    height:90%;
 }
+ #table {
+     position: absolute;
+     left: 1%;
+     bottom: 0;
+ }
+ @media screen and (max-width: 768px){
+     .relax-zone{
+         display: none;
+     }
+ }
 
  .main-panda {
     display: inline-block;
@@ -212,7 +220,3 @@ h3 {
     bottom: 0%;
     left: 40%;
  }
-/*.main-panda img {
-    width: 65%;
-    height: 30%;
- }*/

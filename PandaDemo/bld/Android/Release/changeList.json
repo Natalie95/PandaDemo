@@ -1001,13 +1001,17 @@
     "res\\screens\\android\\screen-mdpi-portrait.png",
     "plugins\\cordova-plugin-dialogs\\src\\ubuntu\\notification.qml",
     "Scripts\\i18n\\angular-locale_rwk.js",
-    "www\\images\\lap1.png"
+    "www\\images\\lap1.png",
+    "www\\images\\relax-zone.png"
   ],
-  "deletedFilesIos": [],
+  "deletedFilesIos": [
+    "www\\images\\ps8CBC.tmp"
+  ],
   "addedPluginsIos": [],
   "deletedPluginsIos": [],
   "changedFiles": [
-    "www\\scripts\\Controllers\\menuController.js"
+    "www\\scripts\\Controllers\\menuController.js",
+    "www\\css\\index.css"
   ],
   "deletedFiles": [],
   "addedPlugins": [],
