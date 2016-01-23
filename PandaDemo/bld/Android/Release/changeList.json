@@ -1002,7 +1002,9 @@
     "plugins\\cordova-plugin-dialogs\\src\\ubuntu\\notification.qml",
     "Scripts\\i18n\\angular-locale_rwk.js",
     "www\\images\\lap1.png",
-    "www\\images\\relax-zone.png"
+    "www\\images\\relax-zone.png",
+    "www\\images\\clock.png",
+    "www\\images\\3ст library day.png"
   ],
   "deletedFilesIos": [
     "www\\images\\ps8CBC.tmp"
@@ -1010,7 +1012,6 @@
   "addedPluginsIos": [],
   "deletedPluginsIos": [],
   "changedFiles": [
-    "www\\scripts\\Controllers\\menuController.js",
     "www\\css\\index.css"
   ],
   "deletedFiles": [],

@@ -220,3 +220,6 @@ h3 {
     bottom: 0%;
     left: 40%;
  }
+ .clock {
+     display: none;
+ }

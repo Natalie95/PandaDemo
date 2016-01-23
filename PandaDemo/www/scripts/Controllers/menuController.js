@@ -15,8 +15,10 @@
             document.getElementById('wardrobe').style.width = 0.6 * (924 / 943) * screen.width + "px";
         }
         document.getElementById('wardrobe').style.height = 0.98 * screen.height + "px";
-        document.getElementById('table').style.width = 0.2 * (551 / 305) * screen.width + "px";
-        document.getElementById('table').style.height = 0.2 * screen.width + "px";
+        document.getElementById('table').style.width = 0.55 * (554 / 847) * screen.width + "px";
+        document.getElementById('table').style.height = 0.55 * screen.width + "px";
+        document.getElementById('clock').style.width = 0.2 * (344 / 343) * screen.width + "px";
+        document.getElementById('clock').style.height = 0.2 * screen.width + "px";
     };
 
 
