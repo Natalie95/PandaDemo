@@ -12,11 +12,36 @@
         adapt();
     };
 
+    $scope.pandaJump = function () {
+        var panda = document.getElementById('pandaPng');
+        var counter = 0, up = 0, timeInterval = 10, multyplier = 2, numbOfIteration = 40, step = 3;
+        var timer = setInterval(function () {
+            up += multyplier *step;
+            counter++;
+            panda.style.bottom = up + 'px';
+            multyplier *= 0.95;
+            if (counter > numbOfIteration) {
+                var timerReverse = setInterval(function () {
+                    up -= multyplier * step;
+                    counter--;
+                    panda.style.bottom = up + 'px';
+                    multyplier /= 0.95;
+                    if (counter <= 0) {
+                        clearInterval(timerReverse);
+                        clearInterval(timer);
+                    }
+
+                }, timeInterval);
+            }
+        }, timeInterval);
+        panda.style.bottom = '0px';
+    };
+
     var adapt = function () {
         if ((window.orientation == 0) || window.orientation == 180) {
-             adaptiveSizeVertical();
-        } else if (window.orientation == -90 || window.orientation == 90) {
-            adaptiveSizeHorizontal();
+             adaptiveSizeHorizontal();
+        } else if (window.orientation == -90 || window.orientation == 90) {       
+            adaptiveSizeVertical();
         }
     };
 
