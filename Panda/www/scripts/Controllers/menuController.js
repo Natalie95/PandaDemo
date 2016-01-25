@@ -38,11 +38,15 @@
     };
 
     var adapt = function () {
-        if ((window.orientation == 0) || window.orientation == 180) {
-             adaptiveSizeHorizontal();
+        /*if ((window.orientation == 0) || window.orientation == 180) {
+            adaptiveSizeHorizontal();
         } else if (window.orientation == -90 || window.orientation == 90) {       
             adaptiveSizeVertical();
-        }
+        }*/
+        if (screen.width > screen.height)
+            adaptiveSizeHorizontal();
+        else 
+            adaptiveSizeVertical();
     };
 
     var adaptiveSizeHorizontal = function () {
